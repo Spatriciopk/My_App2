@@ -4,15 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECE2E2"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/str_text_num1"
+        android:layout_width="406dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/str_text_num1"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/str_text_num2"
+        android:layout_width="415dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="@string/str_text_num2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/rbt_group_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/str_text_num1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/rbt_group_option"
+        android:layout_width="414dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbt_suma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rbt_suma" />
+
+        <RadioButton
+            android:id="@+id/rbt_resta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rbt_resta" />
+
+        <RadioButton
+            android:id="@+id/rbt_multiplicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rbt_multiplicacion" />
+
+        <RadioButton
+            android:id="@+id/rbt_division"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rbt_division" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="194dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="64dp"
+        android:background="#2C0F0F"
+        android:backgroundTint="#FF9800"
+        android:hint="@string/btn_calcular"
+        android:textColor="#ED1414"
+        android:textColorHint="#E8E3E3"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbt_group_option"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/out_str_resultado"
+        android:layout_width="412dp"
+        android:layout_height="94dp"
+        android:hint="@string/out_str_resultado"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular"
+        app:layout_constraintVertical_bias="0.494" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
