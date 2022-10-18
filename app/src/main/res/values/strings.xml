@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">My_App2</string>
+    <string name="app_name">Calculadora Básica</string>
     <string name="str_text_num1"> Ingrese el número 1</string>
     <string name="str_text_num2">Ingrese el número 2</string>
     <string name="rbt_suma">Suma</string>
     <string name="rbt_resta">Resta</string>
     <string name="rbt_multiplicacion">Multiplicación</string>
-    <string name="rbt_division">Divisón</string>
+    <string name="rbt_division">División</string>
     <string name="btn_calcular">Calcular</string>
     <string name="out_str_resultado">Resultado</string>
 </resources>

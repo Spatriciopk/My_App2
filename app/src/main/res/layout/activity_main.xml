@@ -9,38 +9,47 @@
 
     <EditText
         android:id="@+id/str_text_num1"
-        android:layout_width="406dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="42dp"
         android:ems="10"
         android:hint="@string/str_text_num1"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/str_text_num2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/str_text_num2"
-        android:layout_width="415dp"
-        android:layout_height="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="79dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="35dp"
         android:ems="10"
         android:hint="@string/str_text_num2"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/rbt_group_option"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/str_text_num1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/str_text_num1" />
 
     <RadioGroup
         android:id="@+id/rbt_group_option"
-        android:layout_width="414dp"
-        android:layout_height="196dp"
-        android:layout_marginBottom="400dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="222dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calcular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/str_text_num2">
 
         <RadioButton
             android:id="@+id/rbt_suma"
@@ -65,36 +74,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/rbt_division" />
-    </RadioGroup>
 
-    <Button
-        android:id="@+id/btn_calcular"
-        android:layout_width="194dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="64dp"
-        android:background="#2C0F0F"
-        android:backgroundTint="#FF9800"
-        android:hint="@string/btn_calcular"
-        android:textColor="#ED1414"
-        android:textColorHint="#E8E3E3"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbt_group_option"
-        app:layout_constraintVertical_bias="0.0" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/out_str_resultado"
-        android:layout_width="412dp"
-        android:layout_height="94dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="180dp"
         android:hint="@string/out_str_resultado"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_calcular"
-        app:layout_constraintVertical_bias="0.494" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="254dp"
+        android:layout_marginBottom="51dp"
+        android:background="#2C0F0F"
+        android:backgroundTint="#FF9800"
+        android:hint="@string/btn_calcular"
+        android:onClick="calcular"
+        android:textColor="#ED1414"
+        android:textColorHint="#E8E3E3"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/out_str_resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbt_group_option" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="169dp"
+        app:layout_constraintBottom_toTopOf="@+id/out_str_resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_calcular"
+        app:layout_constraintTop_toBottomOf="@+id/rbt_group_option"
+        app:layout_constraintVertical_bias="0.42000002"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="162dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="4dp"
+        android:onClick="juego"
+        app:layout_constraintBottom_toTopOf="@+id/out_str_resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/rbt_group_option"
+        app:layout_constraintVertical_bias="0.46"
+        app:srcCompat="@mipmap/jostick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
