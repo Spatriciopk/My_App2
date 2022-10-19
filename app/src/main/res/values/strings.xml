@@ -8,4 +8,10 @@
     <string name="rbt_division">División</string>
     <string name="btn_calcular">Calcular</string>
     <string name="out_str_resultado">Resultado</string>
+    <string name="double_num1"></string>
+    <string name="str_operacion"></string>
+    <string name="double_num2"></string>
+    <string name="double_respuesta">Ingrese su respuesta</string>
+    <string name="btn_resultadoJuego">Verificar</string>
+    <string name="str_resultado_juego"></string>
 </resources>

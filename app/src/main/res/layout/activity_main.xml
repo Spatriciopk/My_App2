@@ -112,20 +112,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rbt_group_option" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="169dp"
-        app:layout_constraintBottom_toTopOf="@+id/out_str_resultado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_calcular"
-        app:layout_constraintTop_toBottomOf="@+id/rbt_group_option"
-        app:layout_constraintVertical_bias="0.42000002"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="162dp"
@@ -134,8 +120,7 @@
         android:onClick="juego"
         app:layout_constraintBottom_toTopOf="@+id/out_str_resultado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/btn_calcular"
         app:layout_constraintTop_toBottomOf="@+id/rbt_group_option"
         app:layout_constraintVertical_bias="0.46"
         app:srcCompat="@mipmap/jostick" />
