@@ -21,7 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
     private TextView et1,et2,et3,et5,et6,et7;
     private EditText et4;
     private TextView tv;
-    private double int_num1,int_num2;
+    private int int_num1,int_num2;
     private int int_num3;
     private String operacion []={"+","-","*","/"};
     private String url [] = {"suma.jpg","resta.jpg","multi.jpg","division.png"};
@@ -55,11 +55,13 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void reload(){
         df = new DecimalFormat("#.00");
-        int_num1 =  Double.parseDouble(df.format((Math.random()*10+1)));
-        int_num2 =  Double.parseDouble(df.format((Math.random()*10+1)));
+        int_num1 = (int) Math.floor(Math.random()*9+1);
+        int_num2 = (int) Math.floor(Math.random()*9+1);
         int_num3 = (int) (Math.random()*4);
         et1.setText(String.valueOf(int_num1));
         et2.setText(String.valueOf(int_num2));
+        et4.setText("");
+        et5.setText("");
         imagen();
 
         //thread=null;
@@ -152,6 +154,7 @@ public class MainActivity2 extends AppCompatActivity {
                 imggan.setImageResource(R.drawable.error);
                 et5.setText("Vuelva a Intentarlo");
                 sumincorrectos();
+                et4.setText("");
             }
 
         }
@@ -164,12 +167,14 @@ public class MainActivity2 extends AppCompatActivity {
                 time=59;
                 sumcorrectos();
                 reload();
+
             }
             else
             {
                 imggan.setImageResource(R.drawable.error);
                 et5.setText("Vuelva a Intentarlo");
                 sumincorrectos();
+                et4.setText("");
             }
         }
         else if ( operacion[int_num3].equals("*")){
@@ -187,11 +192,16 @@ public class MainActivity2 extends AppCompatActivity {
                 imggan.setImageResource(R.drawable.error);
                 et5.setText("Vuelva a Intentarlo");
                 sumincorrectos();
+                et4.setText("");
             }
         }
         else if ( operacion[int_num3].equals("/")){
-            resultado_num = Double.parseDouble(df.format(int_num1/int_num2));
-            if(result == resultado_num){
+            double dbnum1 = Double.parseDouble(String.valueOf(int_num1));
+            double dbnum2 = Double.parseDouble(String.valueOf(int_num2));
+            resultado_num = Double.parseDouble(df.format(dbnum1/dbnum2));
+            System.out.println(resultado_num);
+            System.out.println(result);
+            if( result == resultado_num){
                 et5.setText("Felicitaciones");
                 imggan.setImageResource(R.drawable.correcto);
                 thread.interrupt();
@@ -205,6 +215,7 @@ public class MainActivity2 extends AppCompatActivity {
                 imggan.setImageResource(R.drawable.error);
                 et5.setText("Vuelva a Intentarlo");
                 sumincorrectos();
+                et4.setText("");
             }
         }
     }
